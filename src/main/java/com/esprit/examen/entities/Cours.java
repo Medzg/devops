@@ -66,6 +66,9 @@ public class Cours implements Serializable {
 		this.typeCours = typeCours;
 		this.intitule = intitule;
 	}
+	public Cours(){
+		
+	}
 	
 	
 	
