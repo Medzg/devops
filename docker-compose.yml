@@ -24,7 +24,7 @@ services:
       - 8083:8082
     environment:
       SPRING_APPLICATION_JSON: '{
-      "spring.datasource.url" : "jdbc:mysql://mysqldb:3306/testF?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
+      "spring.datasource.url" : "jdbc:mysql://mysqldb:3307/testF?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
       "spring.datasource.username":"root",
       "spring.datasource.password":"",
       "spring.jpa.properties.hibernate.dialect": "org.hibernate.dialect.MySQL57InnoDBDialect",
