@@ -18,7 +18,14 @@ public class FormateurRestController {
     @Autowired
     IFormateurService formateurService;
 
-    @RequestMapping(value = "/ajouterFormateur")
+    @RequestMapping(value = "/docker")
+    @ResponseBody
+    public String accueilFormateur() {
+        //ceci est un test for testaaaaagit diff branch1..branch2
+       return "Welcome docker from formateur";
+    }
+
+    @PostMapping(value = "/ajouterFormateur")
     @ResponseBody
     public ResponseEntity ajouterFormateur(@Valid @RequestBody Formateur formateur) throws Exception{
 

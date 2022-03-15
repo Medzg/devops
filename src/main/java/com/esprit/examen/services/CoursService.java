@@ -1,12 +1,15 @@
 package com.esprit.examen.services;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.esprit.examen.entities.Cours;
+import com.esprit.examen.entities.Session;
 import com.esprit.examen.repositories.CoursRepository;
+import com.esprit.examen.repositories.SessionRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 @Service
@@ -41,14 +44,15 @@ public class CoursService implements ICoursService {
 		l.info("Out supprimerCours() without errors.");
 		}
 		catch (Exception e) { 
-			l.error("Erreur dans supprimerCours() :  {e}");
+			l.error("Erreur dans supprimerCours() : " + e);
 			}
 	}
 
 	@Override
 	public List<Cours> getCours() {
 		
-		return coursRepository.findAll();
+		List<Cours> cours = coursRepository.findAll();
+		return cours;
 	}
 	
 	@Override
@@ -60,7 +64,7 @@ public class CoursService implements ICoursService {
 
 	@Override
 	public Cours getCoursByID(Long id) {
-		return coursRepository.findById(id).orElse(null);
+		return coursRepository.findById(id).get();
 	}
 
 
