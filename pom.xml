@@ -32,11 +32,11 @@
 	<distributionManagement>
 		<repository>
 			<id>deploymentRepo</id>
-			<url>http://localhost:8081/repository/maven-releases/</url>
+			<url>http://localhost:8086/repository/maven-releases/</url>
 		</repository>
 	</distributionManagement>
 <!--	<scm>
-		<connection>scm:git:git@github.com:kamatchokhalil/GesFormation.git</connection>
+		<connection>scm:git:git@github.com:https://github.com/Medzg/devops.git</connection>
 	  <tag>GesF-0.0.1</tag>
   </scm>-->
 
