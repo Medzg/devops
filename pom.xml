@@ -11,6 +11,7 @@
 	<artifactId>GesF</artifactId>
 	<name>GesF</name>
 	<description>springBootProject</description>
+	<version>@{project.version}</version>
 	<properties>
 		<build.number></build.number>
 <!--		<java.version>1.8</java.version>
