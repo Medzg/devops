@@ -2,6 +2,8 @@ version: "3.8"
 services:
   mysqldb:
     image: mysql:latest
+    networks:
+      - employee-mysql
     restart: unless-stopped
 
     environment:
@@ -19,9 +21,10 @@ services:
       context: ./
       dockerfile: Dockerfile
     restart: on-failure
-
     ports:
       - 8083:8082
+    networks:
+      - employee-mysql
     environment:
       SPRING_APPLICATION_JSON: '{
       "spring.datasource.url" : "jdbc:mysql://mysqldb:3306/testF?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimezone=UTC",
@@ -35,6 +38,7 @@ services:
       - .m2:/var/lib/docker/volumes/gestfVolume/_data
     stdin_open: true
     tty: true
-
+networks:
+  employee-mysql: 
 volumes:
   db:
